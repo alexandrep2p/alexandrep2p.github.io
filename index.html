@@ -8,11 +8,36 @@
     <title>Alexandre Abreu - Portifolio</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
+    <!-- Custom JS-->
+    <script>
+        function openSobre(element) {
+            if ($(element).hasClass('d-none')) {
+                document.getElementById("rowSobre").className = "row";
+                document.getElementById("rowSobre").className += " align-items-center";
+            } else {
+                document.getElementById("rowSobre").className = "row";
+                document.getElementById("rowSobre").className += " align-items-center";
+                document.getElementById("rowProjetos").className = "row";
+                document.getElementById("rowProjetos").className += " d-none";
+            }
+        }
+
+        function openProjetos(element) {
+            if ($(element).has('d-none')) {
+                document.getElementById("rowProjetos").className = "row;"
+            }
+            document.getElementById("rowProjetos").className = "row";
+            document.getElementById("rowSobre").className = "row";
+            document.getElementById("rowSobre").className += " d-none";
+        }
+    </script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
         crossorigin="anonymous">
@@ -22,49 +47,192 @@
     <div class="container-fluid">
         <div class="row header py-2">
             <div class="col-12 align-self-center text-center">
-                <span>alexandre abreu - front end developer</span>
+                <h1>alexandre abreu / front end developer</h1>
             </div>
         </div>
-        <div class="container">
-            <!-- Menu de opções para abrir os collapse -->
+        <div class="container h-100">
+
+            <!-- Menu de opções-->
             <div class="row align-self-center py-4 align-middle">
                 <div class="col-12">
                     <ul class="nav justify-content-center">
-                        <li class="mx-2 nav-item">
-                            <a href="#" class="nav-link"><i class="fas fa-user-alt fa-2x mx-2"></i>sobre mim</a>
+                        <li class="mx-2 nav-item" onclick="openSobre(this)">
+                            <a href="#" class="nav-link"><i class="fas fa-user-alt fa-2x mx-2"></i>sobre
+                                mim</a>
                         </li>
-                        <li class="mx-2 nav-item">
+                        <li class="mx-2 nav-item" onclick="openProjetos(this)">
                             <a href="#" class="nav-link"><i class="fas fa-code fa-2x mx-2"></i>projetos</a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <!-- Collapse 'sobre mim' -->
-            <div class="row d-none">
 
-            </div>
-            <!-- Collapse 'projetos' -->
-            <div class="row h-100">
-                <div class="col-4 my-auto">
-                    <div class="list-group text-center list-project">
-                        <a href="#" class="list-group-item list-group-item-action list-project">NMS Dashboard</a>
-                        <a href="#" class="list-group-item list-group-item-action list-project">AtlasApp</a>
-                        <a href="#" class="list-group-item list-group-item-action list-project">Apegapet</a>
-                    </div>
+            <!-- Collapse 'sobre mim' -->
+            <div class="row align-items-center" id="rowSobre">
+                <div class="col-12 col-lg-6 text-justify my-3">
+                    <span class="title-resumo">Olá, eu sou o Alexandre!</span>
+                    <br><br>
+                    <span class="text-resumo">Sou recém formado em Gestão da Tecnologia da Informação pela FATEC
+                        Guaratinguetá. Desenvolvo
+                        principalmente na área de front end, mas quando necessário também participo do back end.
+                        <br><br>
+                        Tenho
+                        interesse em me aperfeiçoar em UX/UI e futuramente me dedicar 100% nesse campo. Desenvolvo
+                        utilizando principalmente HTML, CSS e Javascript, mas não dispenso frameworks que
+                        possam auxiliar. Clique em "projetos" e veja alguns de meus trabalhos.</span>
                 </div>
-                <div class="col-8">
-                    <div class="row my-0 text-center">
-                        <div class="col-12 ">
-                            <h1 class="title-project">Dashboard No Man's Sky</h1>
-                            <span class="text-project">Conceito de UI de dashboard para o jogo No Man's Sky.</span><br>
-                            <span class="text-project">VSCode , GIMP , Bootstrap 4 , loading.io , Font Awesome</span><br>
-                            <a class="link-project" href="https://guaravita.github.io/nomansskydashboard/">Link para o
-                                projeto</a>
+                <div class="col-12 col-lg-6 text-center">
+                    <div class="row ">
+                        <div class="col-4">
+                            <a href="https://www.linkedin.com/in/carlos-alexandre-oliveira-de-abreu-4161a2b5/">
+                                <i class="fab fa-linkedin fa-5x"></i><br>
+                                <span class="text-contact">
+                                    LinkedIn
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="https://gitlab.com/guaravita">
+                                <i class="fab fa-gitlab fa-5x"></i><br>
+                                <span class="text-contact">
+                                    GitLab
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="https://github.com/guaravita">
+                                <i class="fab fa-github-square fa-5x"></i><br>
+                                <span class="text-contact">
+                                    GitHub
+                                </span>
+                            </a>
                         </div>
                     </div>
-                    <div class="row my-0">
-                        <div class="col-12">
-                            <img src="img/nms.png" class="img-fluid" alt="">
+                    <div class="row align-items-center">
+                        <div class="col-4">
+                            <a href="mailto:alexandre_1605@outlook.com">
+                                <i class="fas fa-envelope fa-5x"></i><br>
+                                <span class="text-contact">
+                                    E-mail
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="tel:+5512996152432">
+                                <i class="fab fa-whatsapp-square fa-5x"></i><br>
+                                <span class="text-contact">
+                                    WhatsApp
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="https://www.facebook.com/alexandre.1605">
+                                <i class="fab fa-facebook-square fa-5x"></i><br>
+                                <span class="text-contact">
+                                    Facebook
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Collapse 'projetos' -->
+            <div class="row d-none" id="rowProjetos">
+                <!--Accordion-->
+                <div class="accordion md-accordion mt-2" id="accordionProjetos" role="tablist" aria-multiselectable="true">
+                    <!-- Accordion 1 -->
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne1">
+                            <a data-toggle="collapse" data-parent="#accordionProjetos" href="#collapseOne1"
+                                aria-expanded="false" aria-controls="collapseOne1">
+                                <h5 class="mb-0 text-center">
+                                    NMS Dashboard <i class="fas fa-plus-circle"></i>
+                                </h5>
+                            </a>
+                        </div>
+                        <!-- Card 1 -->
+                        <div id="collapseOne1" class="collapse" role="tabpanel" aria-labelledby="headingOne1"
+                            data-parent="#accordionProjetos">
+                            <div class="card-body">
+                                <div class="row my-0 text-center h-100">
+                                    <div class="col-12 col-lg-6 align-self-center">
+                                        <h1 class="title-project">Dashboard No Man's Sky</h1>
+                                        <span class="text-project">Conceito de UI de dashboard para o jogo No Man's
+                                            Sky.</span><br>
+                                        <span class="text-project">VSCode , GIMP , Bootstrap 4 , loading.io , Font
+                                            Awesome</span><br>
+                                        <a class="link-project" href="https://guaravita.github.io/nomansskydashboard/">Link
+                                            para o
+                                            projeto</a>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <img src="img/nms.png" class="img-fluid" alt="No Mans sky dashboard">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion 2 -->
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingTwo2">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionProjetos" href="#collapseTwo2"
+                                aria-expanded="false" aria-controls="collapseTwo2">
+                                <h5 class="mb-0 text-center">
+                                    Rede Atlas <i class="fas fa-plus-circle"></i>
+                                </h5>
+                            </a>
+                        </div>
+                        <!-- Card 2 -->
+                        <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2"
+                            data-parent="#accordionProjetos">
+                            <div class="card-body">
+                                <div class="row my-0 text-center">
+                                    <div class="col-12 col-lg-6 align-self-center">
+                                        <h1 class="title-project">Rede Atlas</h1>
+                                        <span class="text-project">Aplicativo para rede de vantagens.</span><br>
+                                        <span class="text-project">VSCode , MySQL , NodeJS , Ionic 3 , VPS Linux</span><br>
+                                        <a class="link-project" href="https://play.google.com/store/apps/details?id=br.com.ghpdevs.atlasapp">Link
+                                            para o
+                                            projeto</a>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <img src="img/atlas.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion 3 -->
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingThree3">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionProjetos" href="#collapseThree3"
+                                aria-expanded="false" aria-controls="collapseThree3">
+                                <h5 class="mb-0 text-center">
+                                    Apegapet <i class="fas fa-plus-circle"></i>
+                                </h5>
+                            </a>
+                        </div>
+                        <!-- Card 3 -->
+                        <div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                            data-parent="#accordionProjetos">
+                            <div class="card-body">
+                                <div class="row my-0 text-center">
+                                    <div class="col-12 col-lg-6 align-self-center">
+                                        <h1 class="title-project">Apegapet</h1>
+                                        <span class="text-project">Projeto de término de conclusão de curso.</span><br>
+                                        <span class="text-project">VSCode , MySQL , NodeJS , Ionic 3 , VPS Linux</span><br>
+                                        <a class="link-project" href="https://play.google.com/store/apps/details?id=br.com.ghpdevs.apegapet">Link
+                                            para o projeto</a>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <img src="img/apegapet.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

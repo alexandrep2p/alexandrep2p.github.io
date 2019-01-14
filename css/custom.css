@@ -4,11 +4,8 @@
     src: url('../font/JuliusSansOne-Regular.eot?#iefix') format('embedded-opentype'), url('../font/JuliusSansOne-Regular.woff') format('woff'), url('../font/JuliusSansOne-Regular.ttf') format('truetype'), url('JuliusSansOne-Regular.svg#JuliusSansOne-Regular') format('svg');
 }
 
-.container-fluid{
+.container-fluid {
     overflow-x: hidden;
-}
-
-.container{
 }
 
 body {
@@ -16,8 +13,20 @@ body {
     background-color: #fcf7f3;
 }
 
+h1{
+    font-size: 2.0em;
+}
+
 .header {
     background-color: #3f3e3c;
+}
+
+#accordionProjetos {
+    width: 100%;
+}
+
+.card {
+    background-color: #fcf7f3;
 }
 
 .btn {
@@ -34,30 +43,46 @@ a {
     color: #3f3e3c;
 }
 
-a:hover{
+a:hover {
     color: #489577;
 }
 
-.title-project{
+.title-project {
     color: #489577;
 }
 
-.text-project{
+.text-project {
     color: #3f3e3c;
     font-size: 1em;
 }
 
-.link-project{
+.title-resumo{
+    color: #489577;
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+.text-resumo{
+    color: #3f3e3c;
+    font-size: 1.2em;
+}
+
+.text-contact{
+    color: #3f3e3c;
+    font-size: 1.2em;
+}
+
+.link-project {
     color: #489577;
     font-weight: bold;
 }
 
-.list-project{
+.list-project {
     background-color: #f0e6de;
     color: #3f3e3c;
     font-weight: bold;
 }
 
-.list-project:hover{
+.list-project:hover {
     background-color: #489577;
 }
