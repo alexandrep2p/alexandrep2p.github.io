@@ -10,7 +10,7 @@
 
 body {
     font-family: 'JuliusSansOne-Regular';
-    background-color: #fcf7f3;
+    background-color: #f7f0f0;
 }
 
 h1{
@@ -18,7 +18,7 @@ h1{
 }
 
 .header {
-    background-color: #3f3e3c;
+    background-color: #252525;
 }
 
 #accordionProjetos {
@@ -26,11 +26,11 @@ h1{
 }
 
 .card {
-    background-color: #fcf7f3;
+    background-color: #f7f0f0;
 }
 
 .btn {
-    background-color: #f0e6de;
+    background-color: #f7f0f0;
 }
 
 span {
@@ -40,49 +40,49 @@ span {
 
 a {
     text-decoration: none;
-    color: #3f3e3c;
+    color: #252525;
 }
 
 a:hover {
-    color: #489577;
+    color: #fa5f1a;
 }
 
 .title-project {
-    color: #489577;
+    color: #fa5f1a;
 }
 
 .text-project {
-    color: #3f3e3c;
+    color: #252525;
     font-size: 1em;
 }
 
 .title-resumo{
-    color: #489577;
+    color: #fa5f1a;
     font-size: 1.3em;
     font-weight: bolder;
 }
 
 .text-resumo{
-    color: #3f3e3c;
+    color: #252525;
     font-size: 1.2em;
 }
 
 .text-contact{
-    color: #3f3e3c;
+    color: #252525;
     font-size: 1.2em;
 }
 
 .link-project {
-    color: #489577;
+    color: #fa5f1a;
     font-weight: bold;
 }
 
 .list-project {
-    background-color: #f0e6de;
-    color: #3f3e3c;
+    background-color: #f7f0f0;
+    color: #252525;
     font-weight: bold;
 }
 
 .list-project:hover {
-    background-color: #489577;
+    background-color: #fa5f1a;
 }

@@ -1,8 +1,8 @@
 {
     "short_name": "Alexandre Abreu",
     "name": "Portifólio front end  - Alexandre Abreu",
-    "theme_color": "#3f3e3c",
-    "background_color": "#fcf7f3",
+    "theme_color": "#252525",
+    "background_color": "#f7f0f0",
     "display": "standalone",
     "orientation": "portrait"
 }
